@@ -1,0 +1,30 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - webform.webform.contact
+  module:
+    - system
+    - webform
+  theme:
+    - openy_carnation
+id: openy_carnation_webform
+theme: openy_carnation
+region: pre_footer
+weight: 0
+provider: null
+plugin: webform_block
+settings:
+  id: webform_block
+  label: 'Contact US'
+  label_display: visible
+  provider: webform
+  webform_id: contact
+  default_data: ''
+  redirect: false
+visibility:
+  error_page:
+    id: error_page
+    negate: false
+    status_codes:
+      404: '404'
